@@ -79,7 +79,8 @@ pipeline {
             } 
         }
         stage ('deploy'){
-			echo 'deployment started'
+		steps{
+			echo "deployment started..."
 			bat '''copy C:\\Program Files (x86)\\Jenkins\\workspace\\Pipeline-Nexus\\target\\*.war C:\\apache-tomcat-8.5.54-windows-x64\\apache-tomcat-8.5.54\\webapps\\'''
 		}
     }
