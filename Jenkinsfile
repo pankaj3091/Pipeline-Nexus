@@ -81,7 +81,7 @@ pipeline {
         stage ("Deploy on tomcat"){
 		steps{
 			echo "deployment started..."
-			bat '''copy C:\\Program Files (x86)\\Jenkins\\workspace\\Pipeline-Nexus\\target\\*.war C:\\apache-tomcat-8.5.54-windows-x64\\apache-tomcat-8.5.54\\webapps\\'''
+			bat '''copy C:\\Program Files (x86)\\Jenkins\\workspace\\Pipeline-Nexus\\target\\spring3-mvc-maven-xml-hello-world-3.0.war C:\\apache-tomcat-8.5.54-windows-x64\\apache-tomcat-8.5.54\\webapps\\'''
 		}
 	}
     }
