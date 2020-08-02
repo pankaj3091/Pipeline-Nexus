@@ -29,15 +29,15 @@ pipeline {
         }
         stage("Build code") {
             steps {
-                script {
+		    bat 'mvn clean package'
+    /*            script {
                     // If you are using Windows then you should use "bat" step
-                    // Since unit testing is out of the scope we skip them
 		    //sh "${MAVEN_HOME}/bin/mvn clean package -f SimpleApp/pom.xml"
 		    //bat (/${MAVEN_HOME}\bin\mvn -Dmaven.test.failure.ignore clean package/)
                     //bat "${MAVEN_HOME}\bin\mvn -Dmaven.test.failure.ignore clean package"
-		    bat 'mvn clean package'
+		    //bat "mvn clean package"
                 }
-            }
+    */        }
         }
         stage("publish artifacts to nexus") {
             steps {
