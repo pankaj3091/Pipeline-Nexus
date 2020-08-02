@@ -29,7 +29,7 @@ pipeline {
         }
         stage("Build code") {
             steps {
-		    bat 'mvn clean package'
+		    bat 'clean package'
     /*            script {
                     // If you are using Windows then you should use "bat" step
 		    //sh "${MAVEN_HOME}/bin/mvn clean package -f SimpleApp/pom.xml"
