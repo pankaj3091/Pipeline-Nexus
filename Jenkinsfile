@@ -34,8 +34,8 @@ pipeline {
                     // Since unit testing is out of the scope we skip them
 		    //sh "${MAVEN_HOME}/bin/mvn clean package -f SimpleApp/pom.xml"
 		    //bat "(/${MAVEN_HOME}\bin\mvn -Dmaven.test.failure.ignore clean package/)"
-                    bat "${MAVEN_HOME}\bin\mvn -Dmaven.test.failure.ignore clean package"
-		    //mvn clean package
+                    //bat "${MAVEN_HOME}\bin\mvn -Dmaven.test.failure.ignore clean package"
+		    bat "mvn clean package"
                 }
             }
         }
